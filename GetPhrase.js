@@ -18,8 +18,8 @@ var GetPhrase = function() {
   });
 }
 
-if (process.argv[1]) {
-  GetPhrase();
-}
+// if (process.argv[1]) {
+//   GetPhrase();
+// }
 
 module.exports = GetPhrase;

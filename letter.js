@@ -1,8 +1,10 @@
 var GetPhrase = require("./GetPhrase");
 
+
+var new GetPhrase = function
 var LetterLogic = function() {
-  this.phrase = GetPhrase();
-  console.log(this.phrase)
+  console.log(GetPhrase());
+  // console.log(this.phrase)
   // for(var i=0; i<GetPhrase.length; i++) {
   //   console.log([i])
   //   console.log("is anything happening")

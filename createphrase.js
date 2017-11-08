@@ -1,9 +1,9 @@
 var fs = require("fs");
 
 
-var CreatePhrase = function() {
-  this.phrase = process.argv.slice(2).join(" ");
-  fs.appendFile('phrases.txt', this.phrase + ", ", function(err) {
+var CreatePhrase = function(word) {
+  word = process.argv.slice(2).join(" ");
+  fs.appendFile('phrases.txt', word + ", ", function(err) {
     if (err) {
       console.log("Error: " + err);
     } else {
