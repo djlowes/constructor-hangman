@@ -7,7 +7,6 @@ var GetPhrase = function() {
     if (!err) {
       this.output = phrases.split(",");
       for (var i = 0; i < output.length; i++) {
-
         this.arr.push(output[i]);
       }
     } else {
@@ -15,9 +14,12 @@ var GetPhrase = function() {
     }
     this.randPhrase = this.arr[Math.floor(Math.random() * this.arr.length)];
     console.log(this.randPhrase);
+    return(this.randPhrase)
   });
 }
 
 if (process.argv[1]) {
   GetPhrase();
 }
+
+module.exports = GetPhrase;
