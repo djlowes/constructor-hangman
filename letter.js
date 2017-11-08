@@ -1,3 +1,5 @@
+
+//SuperClass
 var Letter = function(character) {
 	this.character = character;
 	this.show = false;
@@ -5,9 +7,12 @@ var Letter = function(character) {
 		this.show = true;
 }
 
-letter.prototype.printInfo = function() {
+//Sub1: Makes letters visible from "_"
+Letter.prototype.showy = function() {
 	if (this.show) {
 		return this.character;
 	}
 	return "_ ";
 }
+
+module.exports = Letter;
