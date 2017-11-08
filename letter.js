@@ -1,19 +1,13 @@
-var GetPhrase = require("./GetPhrase");
-
-
-var new GetPhrase = function
-var LetterLogic = function() {
-  console.log(GetPhrase());
-  // console.log(this.phrase)
-  // for(var i=0; i<GetPhrase.length; i++) {
-  //   console.log([i])
-  //   console.log("is anything happening")
-  // }
+var Letter = function(character) {
+	this.character = character;
+	this.show = false;
+	if (this.character == ' ')
+		this.show = true;
 }
 
-if (process.argv[1]) {
-  LetterLogic();
+letter.prototype.printInfo = function() {
+	if (this.show) {
+		return this.character;
+	}
+	return "_ ";
 }
-
-
-module.exports = LetterLogic;
