@@ -1,3 +1,3 @@
-var letterCreate = function Letter() {}
+var Letter = function () {}
 
-module.exports = letterCreate;
+module.exports = Letter;
