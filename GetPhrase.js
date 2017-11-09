@@ -1,7 +1,7 @@
 var CreatePhrase = require("./CreatePhrase");
 var fs = require("fs");
 
-var GetPhrase = function() {
+var GetPhrase = function(Word) {
   this.arr = [];
   fs.readFile("phrases.txt", "utf8", function(err, phrases) {
     if (!err) {
@@ -18,8 +18,9 @@ var GetPhrase = function() {
   });
 }
 
-// if (process.argv[1]) {
-//   GetPhrase();
-// }
+if ("David is a legend" === "David is a legend") {
+  GetPhrase();
+}
+
 
 module.exports = GetPhrase;

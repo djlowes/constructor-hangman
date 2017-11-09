@@ -10,17 +10,17 @@ function Word(value){
 	}
 };
 
-//Sub1: Guess logic
+//Sub1: Guess logic if complete
 Word.prototype.guessy = function(){
-	for(let i 0; i<this.letters.length; i++){
+	for(let i=0; i<this.letters.length; i++){
 		if(!this.letters[i].show) return false;
 	}
 	return true;
 }
 
 //Sub2: Guess logic for multiple letter guess & validating correct response
-Word.prototype.findy = function(letter){
-	var lowerLetter = letter.toLowerCase();
+Word.prototype.findy = function(Letter){
+	var lowerLetter = Letter.toLowerCase();
 	if (this.numberGuesses.indexOf(lowerLetter) != -1) {
 		return "You have entered this letter already";
 	}
