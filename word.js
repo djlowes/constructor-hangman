@@ -9,7 +9,7 @@ function Word(value){
 	}
 };
 
-Word.prototype.setty = function(){
+Word.prototype.showyA = function(){
 	for(let i=0; i<this.letters.length; i++){
 		if(!this.letters[i].show) return false;
 	}

@@ -29,7 +29,7 @@ function gameTime() {
   }]).then(function(typeLetter) {
     var letter = typeLetter.letter;
     gameWord.present(letter);
-    if (gameWord.setty()) {
+    if (gameWord.showyA()) {
       console.log("Correct");
       return;
     }
