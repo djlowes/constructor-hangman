@@ -1,13 +1,10 @@
-
-//SuperClass
-var Letter = function(character) {
+function Letter(character) {
 	this.character = character;
 	this.show = false;
 	if (this.character == ' ')
 		this.show = true;
 }
 
-//Sub1: Makes letters visible from "_"
 Letter.prototype.showy = function() {
 	if (this.show) {
 		return this.character;

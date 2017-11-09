@@ -1,6 +1,5 @@
-var Letter = require("./Letter");
+var Letter = require("./letter");
 
-//SuperClass
 function Word(value){
 	this.value = value;
 	this.letters = [];
@@ -10,29 +9,25 @@ function Word(value){
 	}
 };
 
-//Sub1: Guess logic if complete
-Word.prototype.guessy = function(){
+Word.prototype.setty = function(){
 	for(let i=0; i<this.letters.length; i++){
 		if(!this.letters[i].show) return false;
 	}
 	return true;
 }
 
-//Sub2: Guess logic for multiple letter guess & validating correct response
-Word.prototype.findy = function(Letter){
-	var lowerLetter = Letter.toLowerCase();
-	if (this.numberGuesses.indexOf(lowerLetter) != -1) {
+Word.prototype.present = function(userInput){
+	if (this.numberGuesses.indexOf(userInput) != -1) {
 		return "You have entered this letter already";
 	}
-	this.numberGuesses += lowerLetter;
+	this.numberGuesses += userInput;
 	for(let i=0; i<this.letters.length; i++){
-		if (this.letters[i].value.toLowerCase() == lowerLetter){
+		if (this.letters[i].value == userInput){
 		this.letters[i].show = true;
 		}
 	}
 };
 
-//Sub3: Show letter on correct guess
 Word.prototype.looky = function(){
   var visible = "";
   for(let i=0; i<this.letters.length; i++){
