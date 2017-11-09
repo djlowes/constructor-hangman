@@ -36,6 +36,8 @@ console.log(gameWord)
   // 		message: 'Enter a letter:',
   // 		validate: function(str){
   // //			if (str.length != 1) return false;
+  // 			var regEx = new RegExp("^[a-zA-Z\s]{1,1}$");
+  // 			return regEx.test(str);
   // 				}
   // 		}]).then(function(typeLetter){ //Game control
   // 				var letter = typeLetter.Letter;
