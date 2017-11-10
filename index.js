@@ -6,12 +6,11 @@ var ActualWord = require("./list.js");
 
 var maxGuesses = 12;
 var gameWord = new Word(ActualWord);
-// gameWord.setty();
-// gameWord.present();
- console.log(gameWord)
-// console.log(typeof gameWord)
+
 
 function gameTime() {
+  console.log(gameWord.fuckingWork);
+  // console.log(gameWord)
   if (gameWord.numberGuesses.length >= maxGuesses) {
     console.log('You have used up all your guesses. Game Over.');
     return; //Game over
@@ -29,7 +28,7 @@ function gameTime() {
   }]).then(function(typeLetter) {
     var letter = typeLetter.letter;
     gameWord.present(letter);
-    if (gameWord.showyA()) {
+    if (gameWord.showyWhenComplete()) {
       console.log("Correct");
       return;
     }

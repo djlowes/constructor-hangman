@@ -1,13 +1,13 @@
-function Letter(character) {
-	this.character = character;
+function Letter(value) {
+	this.value = value;
 	this.show = false;
-	if (this.character == ' ')
+	if (this.value == ' ')
 		this.show = true;
 }
 
 Letter.prototype.showy = function() {
 	if (this.show) {
-		return this.character;
+		return this.value;
 	}
 	return "_ ";
 }
